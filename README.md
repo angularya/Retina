@@ -32,12 +32,18 @@ get the output video file
 
 after the test you will get a data.csv file
 the data.csv file contain
-1. timestamp
-2. total object
-3. weather data like(temperature,humidity,)
+1. timestamp.
+2. total object.
+3. weather data like(temperature, humidity, and etc).
 
-you can run plotit to show plot from your data
-just execute python plotit.py
+![csv](https://github.com/angularya/Retina/blob/master/img/csv.png)
+
+you can run plotit to show plot from your current data
+just execute python <ins>plotit.py</ins>
+    it will open your browser and show your current data
+    
+![csv](https://github.com/angularya/Retina/blob/master/img/plot.png)
+
 ## Built With
 
 * [OpenCV](https://opencv.org/) - Used to get Computer Vision library
