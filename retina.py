@@ -172,40 +172,26 @@ while True:
 		
 		to = trackableObjects.get(objectID, None)
 
-		# if there is no existing trackable object, create one
 		if to is None:
 			to = TrackableObject(objectID, centroid)
 
-		# otherwise, there is a trackable object so we can utilize it
-		# to determine direction
 		else:
-			# the difference between the y-coordinate of the *current*
-			# centroid and the mean of *previous* centroids will tell
-			# us in which direction the object is moving (negative for
-			# 'up' and positive for 'down')
 			y = [c[1] for c in to.centroids]
 			direction = centroid[1] - np.mean(y)
 			to.centroids.append(centroid)
 
-			# check to see if the object has been counted or not
 			if not to.counted:
-				# if the direction is negative (indicating the object
-				# is moving up) AND the centroid is above the center
-				# line, count the object
 				if direction < 0 and centroid[1] < H // 2:
 					totalUp += 1
 					print (("1 {} has passed UP at {}").format(a[0],time.strftime("%D:%H:%M:%S")))
 					to.counted = True
 
-				# if the direction is positive (indicating the object
-				# is moving down) AND the centroid is below the
-				# center line, count the object
+
 				elif direction > 0 and centroid[1] > H // 2:
 					totalDown += 1
 					print (("1 {} has passed down at {}").format(a[0],time.strftime("%D:%H:%M:%S")))
 					to.counted = True
 
-		# store the trackable object in our dictionary
 		trackableObjects[objectID] = to
 
 		
@@ -214,8 +200,6 @@ while True:
 			cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 		cv2.circle(frame, (centroid[0], centroid[1]), 4, (0,255,0), -1)
 
-	# construct a tuple of information we will be displaying on the
-	# frame
 	info = [
 		("Passed ",a[0],totalDown),
 	]
@@ -237,7 +221,6 @@ while True:
         totalFrames += 1
 	fps.update()
 
-# stop the timer and display FPS information
 fps.stop()
 print ("####################################################################")
 if x["cod"] != "404": 
