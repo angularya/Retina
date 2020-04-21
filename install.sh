@@ -41,4 +41,11 @@ pkg-config --modversion opencv\
 ld /usr/local/python/cv2/python-3.6\
 sudo mv cv2.cpython-36m-x86_64-linux-gnu.so cv2.so\
 pip install imutils\
+pip install scikit\
+pip install scipy\
+pip install plotly\
+pip install inquirer\
+pip install numpy\
+pip install urllib\
+pip install dlib\
 
