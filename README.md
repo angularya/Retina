@@ -13,9 +13,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
-
-1. Make sure you have an internet connection
-2. and just run the install.sh
+1. Download all the file in Retina Repo
+2. Make sure you have an internet connection
+3. and just run the install.sh
 
 ## Running the tests
 
