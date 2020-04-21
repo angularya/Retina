@@ -49,6 +49,7 @@ just execute python <ins>plotit.py</ins>
 * [OpenCV](https://opencv.org/) - Used to get Computer Vision library
 * [Openweather](https://openweathermap.org/) - Used to get Weather data
 * [NumPy](https://numpy.org/) - Used to generate N-dimensional array
+* [Pandas](https://pandas.pydata.org/) - Used to manipulate Dataframe to array
 * [JSON](https://www.json.org/) - Used to save data from API
 * [Plotly](https://plotly.com/) - Used to generate graph
 * [SciPy](https://www.scipy.org/) - Used to get library for scientific computing
