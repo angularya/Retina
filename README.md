@@ -27,7 +27,19 @@ access specific video file
 
 get the output video file
 1. python retina.py --input $VIDEOPATH --output $VIDEOOUTPUTFOLDER
-
+### Available Object to Detect
+1. car
+2. bus
+3. bicycle
+4. motorbike
+5. person
+6. boat
+7. cat
+8. dog
+9. cow
+10. sheep
+11. bird
+12. botle"
 ## After the test
 
 after the test you will get a data.csv file
