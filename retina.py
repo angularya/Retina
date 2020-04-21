@@ -167,10 +167,9 @@ while True:
 
 	objects = ct.update(rects)
 
-	# loop over the tracked objects
+	
 	for (objectID, centroid) in objects.items():
-		# check to see if a trackable object exists for the current
-		# object ID
+		
 		to = trackableObjects.get(objectID, None)
 
 		# if there is no existing trackable object, create one
@@ -209,8 +208,7 @@ while True:
 		# store the trackable object in our dictionary
 		trackableObjects[objectID] = to
 
-		# draw both the ID of the object and the centroid of the
-		# object on the output frame
+		
 		text = "ID {}".format(objectID)
 		cv2.putText(frame, text, (centroid[0] - 10, centroid[1] - 10),
 			cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
@@ -222,27 +220,21 @@ while True:
 		("Passed ",a[0],totalDown),
 	]
 
-	# loop over the info tuples and draw them on our frame
 	for (i, (k, v,b)) in enumerate(info):
 		text = "{}{}: {}".format(k , v, b)
 		cv2.putText(frame, text, (10, H - ((i * 20) + 20)),
 			cv2.FONT_HERSHEY_DUPLEX, 0.6, (0, 0, 255), 2,cv2.LINE_AA)
 
-	# check to see if we should write the frame to disk
 	if writer is not None:
 		writer.write(frame)
 
-	# show the output frame
+	
 	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
-	# if the `q` key was pressed, break from the loop
 	if key == ord("q"):
 		break
-
-	# increment the total number of frames processed thus far and
-	# then update the FPS counter
-	totalFrames += 1
+        totalFrames += 1
 	fps.update()
 
 # stop the timer and display FPS information
@@ -299,14 +291,13 @@ tup = str(totalUp)
 ntime = str(time.strftime("%D:%H:%M:%S"))
 logging.basicConfig(filename='data.csv', level=logging.DEBUG,format='%(message)s')
 logging.debug('%s,%s,%s,%s,%s,%s,%s,%s',ntime,tdown,tup,current_temperature,current_humidiy,wind_speed,cloudiness,weather_description)
-# check to see if we need to release the video writer pointer
+
 if writer is not None:
 	writer.release()
 
-# if we are not using a video file, stop the camera video stream
 if not args.get("input", False):
 	vs.stop()
-# otherwise, release the video file pointer
+
 else:
 	vs.release()
 
