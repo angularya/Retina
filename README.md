@@ -1,6 +1,6 @@
 # Retina
 
-Retina is a Application that aims to count an object in a certain time.
+Retina is a Application that aims to count an object in a real time.
 
 ## Presentation
 
