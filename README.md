@@ -4,7 +4,7 @@ Retina is a Application that aims to count an object in a real time.
 
 ## Presentation
 
-[![Watch the video](https://img.youtube.com/vi/cSmKRrP16xs/maxresdefault.jpg)](https://www.youtube.com/watch?v=cSmKRrP16xs)
+[![Watch the video](https://github.com/angularya/Retina/blob/master/img/tn.png)](https://www.youtube.com/watch?v=cSmKRrP16xs)
 
 ## Getting Started
 
@@ -42,7 +42,7 @@ you can run plotit to show plot from your current data
 just execute python <ins>plotit.py</ins>
     it will open your browser and show your current data
     
-![csv](https://github.com/angularya/Retina/blob/master/img/plot.png)
+![plot](https://github.com/angularya/Retina/blob/master/img/plot.png)
 
 ## Built With
 
