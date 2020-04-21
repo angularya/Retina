@@ -36,12 +36,15 @@ the data.csv file contain
 2. total object
 3. weather data like(temperature,humidity,)
 
+you can run plotit to show plot from your data
+just execute python plotit.py
 ## Built With
 
 * [OpenCV](https://opencv.org/) - Used to get Computer Vision library
 * [Openweather](https://openweathermap.org/) - Used to get Weather data
 * [NumPy](https://numpy.org/) - Used to generate N-dimensional array
 * [JSON](https://www.json.org/) - Used to save data from API
+* [Plotly](https://plotly.com/) - Used to generate graph
 * [SciPy](https://www.scipy.org/) - Used to get library for scientific computing
 * [MobileNet SSD] - Pretrained Model
 * [Python](https://www.python.org/) - Used for writng Application
