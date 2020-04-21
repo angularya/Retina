@@ -15,7 +15,7 @@ import logging
 import time
 import dlib
 import cv2
-
+#############################
 call('clear', shell=True)
 api_key = "398d3cf8204c51ab0e47c22d1e725174"
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
